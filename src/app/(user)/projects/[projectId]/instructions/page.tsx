@@ -1,6 +1,6 @@
 import CopyBtn from "@/components/copy-btn";
 
-const page = ({ params }: {
+const Page = ({ params }: {
     params: {
         projectId: string
     }
@@ -24,4 +24,4 @@ const page = ({ params }: {
     )
 }
 
-export default page;
+export default Page;

@@ -4,7 +4,7 @@ import { subscriptions } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import ManageSubscription from "./manage-subscription";
 
-const page = async () => {
+const Page = async () => {
     const { userId } = await auth();
 
     if (!userId) {
@@ -28,4 +28,4 @@ const page = async () => {
     )
 };
 
-export default page;
+export default Page;

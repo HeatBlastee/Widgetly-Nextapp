@@ -1,13 +1,14 @@
+// app/(user)/payments/subscribe/page.tsx
+
 import SubscribeBtn from "../subscribe-btn";
 import { monthlyPlanId, yearlyPlanId } from "@/lib/payments";
 
-const page = ({ searchParams }: {
-    searchParams: {
-        plan: string
-    }
-}) => {
-    const { plan } = searchParams;
-
+export default async function Page({
+    searchParams,
+}: {
+    searchParams?: { plan?: string };
+}) {
+    const plan = searchParams?.plan ?? "yearly";
     const planId = plan === "monthly" ? monthlyPlanId : yearlyPlanId;
 
     return (
@@ -17,7 +18,5 @@ const page = ({ searchParams }: {
                 <SubscribeBtn price={planId} />
             </div>
         </div>
-    )
+    );
 }
-
-export default page;

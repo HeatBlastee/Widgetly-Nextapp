@@ -6,7 +6,7 @@ import { Globe, ChevronLeft, Code } from 'lucide-react';
 import Table from "@/components/table";
 
 
-const page = async ({ params }: {
+const Page = async ({ params }: {
     params: {
         projectId: string
     }
@@ -45,4 +45,4 @@ const page = async ({ params }: {
     )
 }
 
-export default page;
+export default Page;
